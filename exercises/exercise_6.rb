@@ -23,3 +23,13 @@ end
 class Employee < ActiveRecord::Base
   belongs_to :store
 end
+
+# Add some data into employees. Here's an example of one:
+@store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 60)
+
+# Create more employee data, associating them with their respective stores.
+@store1.employees.create(first_name: "John", last_name: "Watston", hourly_rate: 50)
+@store1.employees.create(first_name: "Jane", last_name: "Doe", hourly_rate: 55)
+@store2.employees.create(first_name: "Alice", last_name: "Wonder", hourly_rate: 45)
+@store2.employees.create(first_name: "Bob", last_name: "Bentley", hourly_rate: 65)
+
