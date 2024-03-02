@@ -21,3 +21,9 @@ Store.create(name: 'Yaletown', annual_revenue: 430000, mens_apparel: true, women
 
 #Find stores that sell men's apparel
 @mens_stores = Store.where(mens_apparel: true)
+
+#Output names and anual revenue of stores with mens apparel
+puts "Men's Apparel Stores:"
+@mens_stores.each do |store|
+  puts "#{store.name}: Annual Revenue - #{store.annual_revenue}"
+end
