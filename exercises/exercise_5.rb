@@ -12,3 +12,6 @@ require_relative './exercise_4'
 puts "Exercise 5"
 #Output the total revenue for the entire company
 puts "Total revenue for the entire company: #{Store.sum(:annual_revenue)}"
+
+#Output the average annual revenue for all stores
+puts "Average annual revenue for all stores: #{Store.average(:annual_revenue)}"
