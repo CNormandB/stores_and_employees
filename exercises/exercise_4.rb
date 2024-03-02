@@ -27,3 +27,10 @@ puts "Men's Apparel Stores:"
 @mens_stores.each do |store|
   puts "#{store.name}: Annual Revenue - #{store.annual_revenue}"
 end
+
+#Find stores that sell women's apparel with annual revenue under 1Million
+@womens_stores_under_1m = Store.where("womens_apparel = ? AND annual_revenue < ?", true, 1000000)
+puts "\nWomen's Apparel Stores Generating Less Than $1M in Annual Revenue:"
+@womens_stores_under_1m.each do |store|
+  puts "#{store.name}: Annual Revenue - #{store.annual_revenue}"
+end
