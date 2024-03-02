@@ -14,6 +14,12 @@ require_relative './exercise_4'
 require_relative './exercise_5'
 
 puts "Exercise 6"
-puts "----------"
 
-# Your code goes here ...
+# Indicate that a store has many employees and an employee belongs to a store.
+class Store < ActiveRecord::Base
+  has_many :employees
+end
+
+class Employee < ActiveRecord::Base
+  belongs_to :store
+end
